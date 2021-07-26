@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="styles/default.css">
     <title>Luan Sabino</title>
 </head>
 <body>
@@ -17,12 +18,17 @@
             <p>Luan Phylipe Sabino</p>
         </div>
         <div class="buttons-wrapper">
-            <a class="button component-style animated" title="Portifolio"><img src="imgs/portf.svg" alt=""></a>
-            <a class="button component-style animated" title="Contatos"><img src="imgs/contact.svg" alt=""></a>
-            <a class="button component-style animated" title="Sobre mim"><img src="imgs/info.svg" alt=""></a>
+            <a class="button component-style animated" title="Portifolio" id="portfolio"><img src="imgs/portf.svg" alt=""></a>
+            <a class="button component-style animated" title="Contatos" id="contacts"><img src="imgs/contact.svg" alt=""></a>
+            <a class="button component-style animated" title="Sobre mim" id="about"><img src="imgs/info.svg" alt=""></a>
         </div>
-        <div class="card-about">Lorem Ipsum dolor sit amet</div>
+        <div class="card-about flex-config" id="card-about">
+            <blockquote>"Você está me desejando um bom dia ou dizendo que este é um bom dia independente de minha vontade, ou talvez queira me
+                dizer que se sente bem nesse dia ou então este é um bom dia para se estar bem?"</blockquote><cite>O cinzento, Gandalf</cite>
+        </div>
     </div>
-</body>
-<script src="main.js"></script>
+</body>	
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://kit.fontawesome.com/1eaa5ac35a.js" crossorigin="anonymous"></script>
 </html>
