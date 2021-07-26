@@ -1,5 +1,6 @@
 :root{
-    --sizeReference: calc(100vw/1366);
+    --sizeReferenceWidth: calc(100vw/1366);
+    --sizeReferenceHeight: calc(100vh/1024);
 }
 
 *{
@@ -42,8 +43,8 @@ body{
 }
 
 .profile-card{
-    width: calc( var(--sizeReference) * 400);
-    height: 700px;
+    width: calc( var(--sizeReferenceWidth) * 400);
+    height: calc(var(--sizeReferenceHeight) * 800);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,8 +52,8 @@ body{
 }
 
 .button{
-    width: calc(var(--sizeReference) * 173);
-    height: 200px;
+    width: calc(var(--sizeReferenceWidth) * 173);
+    height: calc(var(--sizeReferenceHeight) * 200);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,16 +76,16 @@ body{
     letter-spacing: 0.3rem;
     text-align: justify;
     font-weight: 600;
-    width: calc(var(--sizeReference) * 470);
-    height: 500px;
+    width: calc(var(--sizeReferenceWidth) * 470);
+    height: calc(var(--sizeReferenceHeight) * 550);
     animation: zoom 1s;
+    padding: 15px;
 }
 
 .card-about p{
     font-size: 1.5rem;
     letter-spacing: 0.25rem;
     text-align: justify;
-    padding: 15px;
 }
 
 .card-about a{
@@ -100,10 +101,12 @@ body{
 }
 
 .img-style{
-    width: 230px;
-    height: 346px;
+    width: calc(var(--sizeReferenceWidth) * 230);
+    height: calc(var(--sizeReferenceWidth) * 300);
+    margin-top: 15px;
     background: url(../imgs/image.png);
     background-position: 70%;
+    background-size: 140%;
     filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.25));
     border-radius: 115px;
 }
@@ -166,8 +169,95 @@ body{
 
 @media screen and (max-width: 1024px) {
 
-    body{
-        font-size: 2.5rem;
+    html{
+        font-size: 12px;
     }
     
+}
+
+@media screen and (max-width: 768px) {
+
+    html{
+        font-size: 10px;
+    }
+
+    .button img{
+        width: 60px;
+        height: auto;
+    }
+
+    .buttons-wrapper{
+        height: 80%;
+    }
+
+    .glider-contain{
+        height: 100%;
+    }
+
+    .c-carousel__slide img{
+        height: 80%;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border: none;
+        box-shadow: none;
+    }
+
+    .buttons-wrapper{
+        height: 160px;
+        margin-top: 15px;
+        flex-direction: row;
+    }
+    
+    .component-style, .card-about{
+        margin-top: 15px;
+        width: 90%;
+    }
+
+    .button{
+        margin: 8px;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .profile-card{
+        font-size: 3rem;
+        font-weight: 800;
+        height: 336px;
+    }
+
+    .img-style{
+        width: 166px;
+        height: 209px;
+    }
+
+    .glider-contain {
+        height: 320px;
+        width: 90%;
+    }
+
+    .card-about{
+        height: 320px;
+    }
+
+    .c-carousel__slide img{
+        height: 80%;
+    }
+
 }
