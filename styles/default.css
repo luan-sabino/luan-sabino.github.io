@@ -20,43 +20,63 @@ body{
     letter-spacing: 1rem;
     text-align: center;
     padding: 15px;
-}
-
-.flex-config{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.component-style{
-    border: 6px solid #000000;
-    border-radius: 16px;
-    box-shadow: 5px 5px 0px 0px #00000040;
+    display:flex;
 }
 
 .container{
-    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: 0;
+    padding: 45px;
 }
 
+/*------------------------------ Profile Card ------------------------------*/
+
 .profile-card{
-    width: calc( var(--sizeReferenceWidth) * 400);
-    height: calc(var(--sizeReferenceHeight) * 800);
+    flex-grow: 3;
+    height: 100%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    font-size: 3.5rem;
+}
+
+.img-style{
+    max-width: 100%;
+    max-height: 50%;
+    margin-top: 15px;
+    border-radius: 16px;
+}
+
+/*------------------------------ Buttons ------------------------------*/
+
+.buttons-wrapper{
+    flex-grow: 2;
+    width: 173px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    margin: 25px;
 }
 
 .button{
-    width: calc(var(--sizeReferenceWidth) * 173);
-    height: calc(var(--sizeReferenceHeight) * 200);
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 15px;
+}
+
+.button img{
+    width: auto;
+    height: 100px;
 }
 
 .button:hover{
@@ -64,22 +84,22 @@ body{
     animation-iteration-count: infinite;
 }
 
-.buttons-wrapper{
-    height: 750px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
+/*------------------------------ Cards ------------------------------*/
 
 .card-about{
+    flex-grow: 3;
+    width: 470px;
+    height: 500px;
     font-size: 2rem;
     letter-spacing: 0.3rem;
     text-align: justify;
     font-weight: 600;
-    width: calc(var(--sizeReferenceWidth) * 470);
-    height: calc(var(--sizeReferenceHeight) * 550);
     animation: zoom 1s;
-    padding: 15px;
+
+    border: 6px solid transparent;
+    border-radius: 16px;
+    padding: 25px;
+
 }
 
 .card-about p{
@@ -100,41 +120,35 @@ body{
     margin-top: 10px;
 }
 
-.img-style{
-    width: calc(var(--sizeReferenceWidth) * 230);
-    height: calc(var(--sizeReferenceWidth) * 300);
-    margin-top: 15px;
-    background: url(../imgs/image.png);
-    background-position: 70%;
-    background-size: 140%;
-    filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.25));
-    border-radius: 115px;
+/*------------------------------ Carousel ------------------------------*/
+
+.owl-carousel{
+    padding: 5px;
 }
 
-.c-carousel__slide{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.owl-carousel p{
+    text-align: center;
 }
 
-.c-carousel__slide img{
-    width: 350px;
-    height: 300px;
-    object-fit: fill;
-    box-shadow: 0px 0px 3px 0px #00000040;
-    border: 0px solid #33333354;
+.owl-carousel{
+    display: block;
+    width: 100%;
+    height: auto;
     border-radius: 16px;
 }
 
-.c-carousel__slide p{
-    text-align: center;
+.box-img{
+    max-width: 100%;
+    max-height: 280px;
 }
 
-.glider{
-    padding-bottom: 15px;
-    text-align: center;
+.box-img:hover{
+    transition: 0.3s;
+    transform: translateY(-5px); box-shadow: 0px 5px 3px 0px #00000040;
+    
 }
+
+/*------------------------------ Animations ------------------------------*/
 
 @keyframes movetoleft {
     0%  {transform: translate(-5px, -5px); box-shadow: 10px 10px 0px 0px #00000040;}
@@ -167,97 +181,94 @@ body{
     animation-iteration-count: infinite;
 }
 
-@media screen and (max-width: 1024px) {
+/*------------------------------  To apply at last ------------------------------*/
 
+
+.flex-config{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.component-style{
+    border: 6px solid #000000;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0px 0px #00000040;
+    padding: 25px;
+}
+
+/*------------------------------ Responsivity ------------------------------*/
+
+@media screen and (max-width: 1024px){
+    
     html{
         font-size: 12px;
     }
-    
+
+    .card-about{
+        width: 350px;
+    }
+
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 768px){
+    
     html{
-        font-size: 10px;
+        font-size: 9px;
+    }
+
+    .card-about #aboutMe{
+        font-size: 2rem;
+    }
+
+    .buttons-wrapper{
+        width: 120px;
     }
 
     .button img{
-        width: 60px;
-        height: auto;
+        height: 70px;
     }
 
-    .buttons-wrapper{
-        height: 80%;
-    }
-
-    .glider-contain{
-        height: 100%;
-    }
-
-    .c-carousel__slide img{
-        height: 80%;
-    }
-    
-}
-
-@media screen and (max-width: 425px) {
-
-    body{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        border: none;
-        box-shadow: none;
-    }
-
-    .buttons-wrapper{
-        height: 160px;
-        margin-top: 15px;
-        flex-direction: row;
-    }
-    
-    .component-style, .card-about{
-        margin-top: 15px;
-        width: 90%;
-    }
-
-    .button{
-        margin: 8px;
-        height: 100%;
-        padding: 15px;
-    }
-
-    .profile-card{
-        font-size: 3rem;
-        font-weight: 800;
-        height: 336px;
-    }
-
-    .img-style{
-        width: 166px;
-        height: 209px;
-    }
-
-    .glider-contain {
-        height: 320px;
-        width: 90%;
+    .component-style{
+        padding: 10px;
     }
 
     .card-about{
-        height: 320px;
+        width: 280px;
     }
 
-    .c-carousel__slide img{
-        height: 80%;
+    .profile-card{
+        width: 250px;
     }
+
+}
+
+@media screen and (max-width: 425px){
+    
+    body{
+        flex-direction: column;
+    }
+
+    .container{
+        flex-direction: column;
+        border: 0px;
+        margin: 0px;
+        box-shadow: none;
+    }
+
+    .profile-card{
+        height: 350px;
+    }
+
+    .buttons-wrapper{
+        flex-direction: row;
+        height: 150px;
+    }  
+
+    .profile-card, .buttons-wrapper, .card-about{
+        width: 100%;
+    }
+
 
 }
