@@ -30,6 +30,7 @@ body{
     align-items: center;
     margin: 0;
     padding: 45px;
+    z-index: 3;
 }
 
 /*------------------------------ Profile Card ------------------------------*/
@@ -43,6 +44,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     font-size: 3.5rem;
+    background-color: #FFF;
 }
 
 .img-style{
@@ -72,6 +74,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 15px;
+    background-color: #FFF;
 }
 
 .button img{
@@ -100,6 +103,7 @@ body{
     border-radius: 16px;
     padding: 25px;
 
+    background-color: #FFF;
 }
 
 .card-about p{
@@ -198,6 +202,15 @@ body{
     padding: 25px;
 }
 
+.background-effect{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 50%;
+    height: 50%;
+}
+
 /*------------------------------ Responsivity ------------------------------*/
 
 @media screen and (max-width: 1024px){
@@ -265,6 +278,10 @@ body{
         flex-direction: row;
         height: 150px;
     }  
+
+    .button{
+        margin-left: 5px;
+    }
 
     .profile-card, .buttons-wrapper, .card-about{
         width: 100%;
