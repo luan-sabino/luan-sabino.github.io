@@ -225,7 +225,7 @@ body{
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 980px){
     
     html{
         font-size: 9px;
@@ -257,7 +257,7 @@ body{
 
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 600px){
     
     body{
         flex-direction: column;
@@ -287,5 +287,13 @@ body{
         width: 100%;
     }
 
+
+}
+
+@media screen and (max-height: 560px){
+    
+    .card-about{
+        height: 90%;
+    }
 
 }
