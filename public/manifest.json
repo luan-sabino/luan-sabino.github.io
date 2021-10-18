@@ -1,0 +1,14 @@
+{
+  "short_name": "Luan Sabino",
+  "name": "Luan Sabino - Portfolio",
+  "icons": [
+    {
+      "src": "./img/LSFavicon.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
